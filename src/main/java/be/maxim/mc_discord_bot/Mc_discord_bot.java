@@ -6,12 +6,12 @@ public final class Mc_discord_bot extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        // Plugin startup logic
+        System.out.println("Mc_discord_bot is starting...");
 
     }
 
     @Override
     public void onDisable() {
-        // Plugin shutdown logic
+        System.out.println("Mc_discord_bot is stopping...");
     }
 }
