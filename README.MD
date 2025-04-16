@@ -1,3 +1,3 @@
 # MC DISCORD BOT
 
-This is a personal learning project to learn Git and Java. This minecraft plugin contains various features for Minecraft servers to interact more effectively with their Discord community.
+A personal learning project for learn Git and Java. This minecraft plugin contains various features for Minecraft servers to interact more effectively with their Discord community. Using JDA (Java Discord API) and SpigotMC.
