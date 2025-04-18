@@ -14,7 +14,7 @@
 [15:16:45] [Server thread/INFO]: Using epoll channel type
 [15:16:45] [Server thread/ERROR]: Ambiguous plugin name `mc_discord_bot' for files `plugins/original-mc_discord_bot-1.0-SNAPSHOT.jar' and `plugins/mc_discord_bot-1.0-SNAPSHOT.jar'
 [15:16:45] [Server thread/ERROR]: Could not load 'plugins/original-mc_discord_bot-1.0-SNAPSHOT.jar'
-org.bukkit.plugin.InvalidPluginException: Exception initializing main class `be.maxim.mc_discord_bot.Mc_discord_bot'
+org.bukkit.plugin.InvalidPluginException: Exception initializing main class `be.maxim.mc_discord_bot.McDiscordBot'
 	at org.bukkit.plugin.java.PluginClassLoader.<init>(PluginClassLoader.java:96) ~[spigot-api-1.21.4-R0.1-SNAPSHOT.jar:?]
 	at org.bukkit.plugin.java.JavaPluginLoader.loadPlugin(JavaPluginLoader.java:145) ~[spigot-api-1.21.4-R0.1-SNAPSHOT.jar:?]
 	at org.bukkit.plugin.SimplePluginManager.loadPlugin(SimplePluginManager.java:406) ~[spigot-api-1.21.4-R0.1-SNAPSHOT.jar:?]
@@ -32,7 +32,7 @@ Caused by: java.lang.reflect.InvocationTargetException
 	at org.bukkit.plugin.java.PluginClassLoader.<init>(PluginClassLoader.java:88) ~[spigot-api-1.21.4-R0.1-SNAPSHOT.jar:?]
 	... 9 more
 Caused by: java.lang.NoClassDefFoundError: net/dv8tion/jda/api/sharding/DefaultShardManagerBuilder
-	at be.maxim.mc_discord_bot.Mc_discord_bot.<init>(Mc_discord_bot.java:18) ~[?:?]
+	at be.maxim.mc_discord_bot.McDiscordBot.<init>(Mc_discord_bot.java:18) ~[?:?]
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62) ~[?:?]
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502) ~[?:?]
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486) ~[?:?]
@@ -42,7 +42,7 @@ Caused by: java.lang.ClassNotFoundException: net.dv8tion.jda.api.sharding.Defaul
 	at org.bukkit.plugin.java.PluginClassLoader.loadClass0(PluginClassLoader.java:160) ~[spigot-api-1.21.4-R0.1-SNAPSHOT.jar:?]
 	at org.bukkit.plugin.java.PluginClassLoader.loadClass(PluginClassLoader.java:112) ~[spigot-api-1.21.4-R0.1-SNAPSHOT.jar:?]
 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526) ~[?:?]
-	at be.maxim.mc_discord_bot.Mc_discord_bot.<init>(Mc_discord_bot.java:18) ~[?:?]
+	at be.maxim.mc_discord_bot.McDiscordBot.<init>(Mc_discord_bot.java:18) ~[?:?]
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62) ~[?:?]
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502) ~[?:?]
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486) ~[?:?]
