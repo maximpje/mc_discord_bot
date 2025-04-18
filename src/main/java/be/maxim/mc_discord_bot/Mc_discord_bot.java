@@ -2,6 +2,8 @@ package be.maxim.mc_discord_bot;
 
 import org.bukkit.plugin.java.JavaPlugin;
 import java.util.Objects;
+import java.io.File;
+import java.util.Scanner;
 
 public final class Mc_discord_bot extends JavaPlugin {
 
