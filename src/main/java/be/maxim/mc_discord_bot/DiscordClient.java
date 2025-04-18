@@ -4,15 +4,28 @@ import net.dv8tion.jda.api.OnlineStatus;
 import net.dv8tion.jda.api.sharding.DefaultShardManagerBuilder;
 import net.dv8tion.jda.api.sharding.ShardManager;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.Scanner;
 import javax.security.auth.login.LoginException;
 
 public class DiscordClient {
 
     private final ShardManager shardManager;
+    private String TOKEN;
+
 
     public DiscordClient() throws LoginException {
-        DefaultShardManagerBuilder builder = DefaultShardManagerBuilder.createDefault("TOKEN");
+        try {
+            File token = new File("auth/tokens.txt");
+            Scanner reader = new Scanner(token);
+            while (reader.hasNextLine()) {
+                TOKEN = reader.nextLine();
+            }
+            reader.close();
+        } catch (FileNotFoundException e) {
+            System.out.println("ERROR: Can't read tokens.txt");
+        }
+        DefaultShardManagerBuilder builder = DefaultShardManagerBuilder.createDefault(TOKEN);
         builder.setStatus(OnlineStatus.ONLINE);
         shardManager = builder.build();
     }
@@ -25,7 +38,7 @@ public class DiscordClient {
         try {
             DiscordClient bot = new DiscordClient();
         } catch (LoginException e) {
-            System.out.println("ERROR: Discord ogin exception");
+            System.out.println("ERROR: Discord login exception");
         }
     }
 
