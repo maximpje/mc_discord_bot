@@ -35,8 +35,10 @@ public class DiscordClient {
     }
 
     public void StartBot(){
+        DiscordClient bot;
         try {
-            DiscordClient bot = new DiscordClient();
+            bot = new DiscordClient();
+            System.out.println("started bot");
         } catch (LoginException e) {
             System.out.println("ERROR: Discord login exception");
         }
