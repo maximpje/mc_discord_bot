@@ -8,8 +8,8 @@ public final class McDiscordBot extends JavaPlugin {
     @Override
     public void onEnable() {
         System.out.println("Mc_discord_bot is starting...");
+
         getServer().getPluginManager().registerEvents(new MinecraftEventListener(), this);
-        Objects.requireNonNull(this.getCommand("test")).setExecutor(new CommandTest());
 
         DiscordClient bot = new DiscordClient();
     }
