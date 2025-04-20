@@ -11,7 +11,7 @@ public class MinecraftEventListener implements Listener{
     public void onPlayerJoin(PlayerJoinEvent event) {
         try {
             channel.sendMessage("Player joined the server: " + event.getPlayer().getName()).queue();
-        }catch(java.lang.NullPointerException){
+        }catch(NullPointerException e){
             System.out.println("EXCEPT: Discord channel not set!");
         }
     }
