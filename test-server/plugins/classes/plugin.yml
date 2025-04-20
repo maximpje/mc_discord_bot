@@ -1,7 +1,0 @@
-name: mc_discord_bot
-version: '1.0-SNAPSHOT'
-main: be.maxim.mc_discord_bot.McDiscordBot
-api-version: '1.21'
-commands:
-  test:
-    usage: /test
