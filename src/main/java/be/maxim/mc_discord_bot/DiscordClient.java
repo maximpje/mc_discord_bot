@@ -20,6 +20,7 @@ public class DiscordClient {
             Scanner reader = new Scanner(token);
             while (reader.hasNextLine()) {
                 TOKEN = reader.nextLine();
+                System.out.println(TOKEN);
             }
             reader.close();
         } catch (FileNotFoundException e) {
