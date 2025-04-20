@@ -10,39 +10,28 @@ import javax.security.auth.login.LoginException;
 
 public class DiscordClient {
 
-    private final ShardManager shardManager;
-    private String TOKEN;
-
+    private ShardManager shardManager;
 
     public DiscordClient() throws LoginException {
         try {
             File token = new File("auth/tokens.txt");
             Scanner reader = new Scanner(token);
             while (reader.hasNextLine()) {
-                TOKEN = reader.nextLine();
+                String TOKEN = reader.nextLine();
                 System.out.println(TOKEN);
+                DefaultShardManagerBuilder builder = DefaultShardManagerBuilder.createDefault(TOKEN);
+                builder.setStatus(OnlineStatus.ONLINE);
+                shardManager = builder.build();
+                System.out.println("Logged into DISCORD with: " + TOKEN);
             }
             reader.close();
         } catch (FileNotFoundException e) {
             System.out.println("ERROR: Can't read tokens.txt");
         }
-        DefaultShardManagerBuilder builder = DefaultShardManagerBuilder.createDefault(TOKEN);
-        builder.setStatus(OnlineStatus.ONLINE);
-        shardManager = builder.build();
     }
 
     public ShardManager getShardManager() {
         return shardManager;
-    }
-
-    public void StartBot(){
-        DiscordClient bot;
-        try {
-            bot = new DiscordClient();
-            System.out.println("started bot");
-        } catch (LoginException e) {
-            System.out.println("ERROR: Discord login exception");
-        }
     }
 
 }
