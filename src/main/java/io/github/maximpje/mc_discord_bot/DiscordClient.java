@@ -1,4 +1,4 @@
-package be.maxim.mc_discord_bot;
+package io.github.maximpje.mc_discord_bot;
 
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;

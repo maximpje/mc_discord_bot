@@ -1,4 +1,4 @@
-package be.maxim.mc_discord_bot;
+package io.github.maximpje.mc_discord_bot;
 
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;

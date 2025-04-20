@@ -4,7 +4,7 @@
                       http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>be.maxim</groupId>
+    <groupId>io.github.maximpje</groupId>
     <artifactId>mc_discord_bot</artifactId>
     <version>1.0</version>
     <packaging>jar</packaging>
@@ -70,7 +70,7 @@
                 <configuration>
                     <transformers>
                         <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                            <mainClass>src.main.java.be.maxim.mc_discord_bot.McDiscordBot</mainClass> <!-- You have to replace this with a path to your main class like my.path.Main -->
+                            <mainClass>src.main.io.github.maximpje.mc_discord_bot.McDiscordBot</mainClass> <!-- You have to replace this with a path to your main class like my.path.Main -->
                         </transformer>
                     </transformers>
                     <createDependencyReducedPom>false</createDependencyReducedPom>
