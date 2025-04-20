@@ -6,10 +6,13 @@ import net.dv8tion.jda.api.hooks.ListenerAdapter;
 import org.bukkit.Bukkit;
 
 public class DiscordEventListener extends ListenerAdapter {
+
+    public Channel channel;
+
     @Override
     public void onSlashCommandInteraction(SlashCommandInteractionEvent event) {
         if (event.getName().equals("connect")){
-            Channel channel = event.getChannel();
+            channel = event.getChannel();
             event.reply("Set Broadcast channel").queue();
 
             Bukkit.getServer().broadcastMessage("Broadcast channel in discord set to: " + channel.getName());
