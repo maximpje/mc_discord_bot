@@ -18,7 +18,7 @@ public class DiscordClient {
             while (reader.hasNextLine()) {
                 String TOKEN = reader.nextLine();
                 JDA bot = JDABuilder.createDefault(TOKEN)
-                        .addEventListeners(new EventListener())
+                        .addEventListeners(new DiscordEventListener())
                         .build();
                 System.out.println("Logged into DISCORD with: " + TOKEN);
                 bot.updateCommands().addCommands(

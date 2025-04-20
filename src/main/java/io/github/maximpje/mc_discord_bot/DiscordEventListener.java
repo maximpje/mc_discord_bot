@@ -6,7 +6,7 @@ import org.bukkit.Bukkit;
 
 import java.util.Objects;
 
-public class EventListener extends ListenerAdapter {
+public class DiscordEventListener extends ListenerAdapter {
     @Override
     public void onSlashCommandInteraction(SlashCommandInteractionEvent event) {
         if (event.getName().equals("echo")){
