@@ -12,7 +12,7 @@ public class DiscordClient {
 
     public DiscordClient(){
         try {
-            File token = new File("auth/tokens.txt");
+            File token = new File("sauth/tokens.txt");
             Scanner reader = new Scanner(token);
             while (reader.hasNextLine()) {
                 String TOKEN = reader.nextLine();
@@ -25,6 +25,7 @@ public class DiscordClient {
             reader.close();
         } catch (FileNotFoundException e) {
             System.out.println("ERROR: Can't find/read auth/tokens.txt");
+            System.out.println("INFO: Please check your server folder for auth/tokens.txt containing your discord bot token.");
         }
 
     }
