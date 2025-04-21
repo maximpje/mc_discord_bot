@@ -12,7 +12,7 @@ public class DiscordClient {
 
     public DiscordClient(){
         try {
-            File token = new File("sauth/tokens.txt");
+            File token = new File("auth/tokens.txt");
             Scanner reader = new Scanner(token);
             while (reader.hasNextLine()) {
                 String TOKEN = reader.nextLine();
