@@ -3,6 +3,7 @@ package io.github.maximpje.mc_discord_bot;
 import org.bukkit.Bukkit;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
+import org.bukkit.event.player.AsyncPlayerChatEvent;
 import org.bukkit.event.player.PlayerAdvancementDoneEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
 
@@ -26,6 +27,16 @@ public class MinecraftEventListener implements Listener{
         try {
             if(!event.getAdvancement().getKey().toString().contains("recipe"))
                channel.sendMessage(event.getPlayer().getName() + " has made " + Objects.requireNonNull(event.getAdvancement().getDisplay()).getTitle() + " congratulations!").queue();
+        }catch(NullPointerException e){
+            System.out.println("EXCEPT: Discord channel not set!");
+        }
+    }
+    @EventHandler
+    public void onPlayerChat(AsyncPlayerChatEvent event) {
+        try{
+            String message = event.getMessage();
+            String sender = event.getPlayer().getName();
+            channel.sendMessage(sender + ": " + message).queue();
         }catch(NullPointerException e){
             System.out.println("EXCEPT: Discord channel not set!");
         }

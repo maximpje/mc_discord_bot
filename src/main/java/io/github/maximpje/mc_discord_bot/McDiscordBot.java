@@ -1,7 +1,6 @@
 package io.github.maximpje.mc_discord_bot;
 
 import org.bukkit.plugin.java.JavaPlugin;
-import java.util.Objects;
 
 public final class McDiscordBot extends JavaPlugin {
 
